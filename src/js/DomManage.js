@@ -39,16 +39,19 @@ export default class DomManage {
 
     button.addEventListener('click', (e) => {
       e.preventDefault();
+      const cardActive = document.querySelector('.active');
       const inputEl = document.querySelector('[id=card-input]');
       const inputValue = inputEl.value;
       const value = inputValue.replace(/\s+/g, '');
-      if (value.length < 16) {
-        mistakeInfo('Card number must have at least 16 numbers');
+      if (value.length < 13 || value.length > 19) {
+        mistakeInfo('Card number must have at least 13 and max 19 numbers');
       } else if (validator(value) === false) {
         mistakeInfo('Wrong card number');
+        changeClass(cardActive);
+      } else {
+        showSystem(paymentSystem(value));
+        mistakeInfo('');
       }
-      showSystem(paymentSystem(value));
-      mistakeInfo('');
     });
   }
 }

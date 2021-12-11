@@ -1,0 +1,90 @@
+body {
+    color:#333;
+}
+
+.container {
+    width: 630px;
+    margin: 0 auto;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-input {
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    margin-right: 10px;
+    outline: none;
+    border: solid 1px #afabab;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 2px;
+}
+
+.not-active {
+    filter: grayscale(100%);
+    opacity: 0.3;
+}
+
+.mir {
+    background-image: url(../img/mir.png);
+}
+
+.american_express {
+    background-image: url(../img/american_express.png);
+}
+
+.diners_club {
+    background-image: url(../img/diners_club.png);
+}
+
+.jcb {
+    background-image: url(../img/jcb.png);
+}
+
+.maestro {
+    background-image: url(../img/maestro.png);
+}
+
+.mastercard {
+    background-image: url(../img/mastercard.png);
+}
+
+.VISA {
+    background-image: url(../img/VISA.png);
+}
